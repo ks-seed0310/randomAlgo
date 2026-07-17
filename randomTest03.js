@@ -69,7 +69,7 @@ class random1{
     const _v4=BigInt(this.#v4)
     let g32=t(cs(((_v2+_v3)^_v4^_v1),17n)^(cs(_v2,17n)>>24n)^((_v1>>8n)^(_v2>>12n)^(_v3>>16n)^(_v4>>20n)>>5n)^t(((_v1+_v2)*_v3)+_v4,23))
     g32^=(g32>>15n)
-    g32^=(g32<<7n)&0x9d2c5680n
+    g32^=((g32<<7n)&0x9d2c5680n)
     return Number(t(g32))
   }
 }
