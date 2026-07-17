@@ -68,7 +68,8 @@ class random1{
     this.#v4=Number(t(cs((cs(_v1*_v4,16n)^cs(_v2*_v3,12n)^cs(_v1*_v3,8n)^cs(_v2*_v4,7n))*(((_v1+_v2+_v3+_v4)*(_v1^_v2^_v3^_v4))>>5n),11n)))
     let g32=t(cs((_v2+s3)^BigInt(this.#v4)^_v1^s3,17n))^cs(BigInt(this.#v2),17n)
     g32^=(g32>>15n)
-    return Number(g32)
+    g32^=(g32<<7n)&0x9d2c5680n
+    return Number(t(g32))
   }
 }
 const r=new random1()
