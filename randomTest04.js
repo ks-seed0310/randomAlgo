@@ -63,7 +63,7 @@ class random1{
     this.#v1=t(s2+0x6444856E3F4EA63An^(s1>>17n))
     s2^=s2<<23n
     this.#v2=t(s1^s2^s3^s4^(s1>>6n)^(s2>>12n)^(s3>>18n)^(s4>>24n))
-    this.#v3=t((s1<<10n)^(BigInt(this.#v2)>>10n)^cs(s3^s4,13n)^(00000000174440041n*s4))
+    this.#v3=t((s1<<10n)^(BigInt(this.#v2)>>10n)^cs(s3^s4,13n)^(174440041n*s4))
     const _v1=this.#v1
     const _v2=this.#v2
     const _v3=this.#v3
