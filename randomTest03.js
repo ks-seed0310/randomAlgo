@@ -60,14 +60,14 @@ class random1{
     this.#v1=Number(t(s2+1986875077n))
     s2^=s2<<23n
     this.#v2=Number(t(s1^s2^s3^s4^(s1>>6n)^(s2>>12n)^(s3>>18n)^(s4>>24n)))
-    this.#v3=Number(t((s1<<5n)^(BigInt(this.#v2)>>7n)^cs(s3^s4,13n))^(174440041n*s4))
+    this.#v3=Number(t((s1<<5n)^(BigInt(this.#v2)>>7n)^cs(s3^s4,13n)^(174440041n*s4)))
     const _v1=BigInt(this.#v1)
     const _v2=BigInt(this.#v2)
     const _v3=BigInt(this.#v3)
     const _v4_s=cs((cs(_v1*_v4,16n)^cs(_v2*_v3,12n)^cs(_v1*_v3,8n)^cs(_v2*_v4,7n))*(((_v1+_v2+_v3+_v4)*(_v1^_v2^_v3^_v4))>>5n),11n)
-    this.#v4=Number(t(_v4_s^(_v4_s>>7)^(_v4_s>>13)^(_v4_s>>19)^(256^(_v4_s&0x00000293))))
+    this.#v4=Number(t((_v4_s^(_v4_s>>7)^(_v4_s>>13)^(_v4_s>>19)^(256^(_v4_s&0x00000293)))))
     const _v4=BigInt(this.#v4)
-    let g32=t(cs((_v2+_v3)^_v4^_v1,17n))^(cs(_v2,17n)>>24n)^((_v1>>8n)^(_v2>>12n)^(_v3>>16n)^(_v4>>20n)>>5n)^t(((_v1+_v2)*_v3)+_v4,23)
+    let g32=t(cs(((_v2+_v3)^_v4^_v1),17n)^(cs(_v2,17n)>>24n)^((_v1>>8n)^(_v2>>12n)^(_v3>>16n)^(_v4>>20n)>>5n)^t(((_v1+_v2)*_v3)+_v4,23))
     g32^=(g32>>15n)
     g32^=(g32<<7n)&0x9d2c5680n
     return Number(t(g32))
