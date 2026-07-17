@@ -8,7 +8,7 @@ class random1{
     this.#v2=this.#stir32b(Date.now())
     const c=crypto.getRandomValues(new Uint32Array(4))
     const ch=[...c].map(x=>x.toString(16).padStart(8,"0"))
-    this.#v3=BigInt("0x"+c.join(""))
+    this.#v3=BigInt("0x"+ch.join(""))
     this.#v4=this.#stir32b(this.#v3)
   }
   #cs(v,s){
@@ -60,7 +60,7 @@ class random1{
     let s2=this.#v2
     let s3=this.#v3
     let s4=this.#v4
-    this.#v1=t(s2+0x6444856E3F4EA63An^(s1>>17n))
+    this.#v1=t(s2+0x6444856E3F4EA63An^(s1>>17n)+s3*57n)
     s2^=s2<<23n
     this.#v2=t(s1^s2^s3^s4^(s1>>6n)^(s2>>12n)^(s3>>18n)^(s4>>24n))
     this.#v3=t((s1<<10n)^(BigInt(this.#v2)>>10n)^cs(s3^s4,13n)^(174440041n*s4))
