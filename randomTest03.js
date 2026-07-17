@@ -51,7 +51,7 @@ class random1{
     }
     function cs(V,s){
       let v=t(V)
-      return (v<<s)|(v>>(32n-s))
+      return t((v<<s)|(v>>(32n-s)))
     }
     let s1=BigInt(this.#v1)
     let s2=BigInt(this.#v2)
