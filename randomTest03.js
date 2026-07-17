@@ -76,7 +76,7 @@ class random1{
   }
 }
 const r = new random1();
-const CHUNK_SIZE = 100000; 
+const CHUNK_SIZE = 65536; 
 function runLoop() {
     for (let i = 0; i < CHUNK_SIZE; i++) {
         console.log(r.random1());
