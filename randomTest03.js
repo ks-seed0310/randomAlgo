@@ -64,7 +64,7 @@ class random1{
     const _v1=BigInt(this.#v1)
     const _v2=BigInt(this.#v2)
     const _v3=BigInt(this.#v3)
-    const _v4_s=cs((cs(_v1*_v4,16n)^cs(_v2*_v3,12n)^cs(_v1*_v3,8n)^cs(_v2*_v4,7n))*(((_v1+_v2+_v3+_v4)*(_v1^_v2^_v3^_v4))>>5n),11n)
+    const _v4_s=cs((cs(_v1*s4,16n)^cs(_v2*_v3,12n)^cs(_v1*_v3,8n)^cs(_v2*s4,7n))*(((_v1+_v2+_v3+s4)*(_v1^_v2^_v3^s4))>>5n),11n)
     this.#v4=Number(t((_v4_s^(_v4_s>>7)^(_v4_s>>13)^(_v4_s>>19)^(256^(_v4_s&0x00000293)))))
     const _v4=BigInt(this.#v4)
     let g32=t(cs(((_v2+_v3)^_v4^_v1),17n)^(cs(_v2,17n)>>24n)^((_v1>>8n)^(_v2>>12n)^(_v3>>16n)^(_v4>>20n)>>5n)^t(((_v1+_v2)*_v3)+_v4,23n))
